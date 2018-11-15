@@ -1,7 +1,7 @@
 var Babysitter =( function(){
-	var self;
+	var self = function(){};
 	
 	self.response = "world";
 	
 	return self;
-})();
+});

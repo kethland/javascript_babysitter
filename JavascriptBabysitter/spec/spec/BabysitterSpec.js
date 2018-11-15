@@ -1,6 +1,6 @@
 describe ("A Babysitter", function(){
 	it("returns world", function(){
-		
-		expect(Babysitter.response).toEqual("world");
+		var expected = Babysitter();
+		expect(expected.response).toEqual("world");
 	})
 })
