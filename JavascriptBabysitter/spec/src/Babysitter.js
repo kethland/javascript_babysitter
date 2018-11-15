@@ -2,13 +2,13 @@ var Babysitter =( function(){
 	
 	var self = function(){};
 	
-	self.calculate = function(){
+	function calculate(){
 		
 		return 1;
 		
 	};
 	
-	self.pay = self.calculate();
+	self.pay = calculate();
 	
 	return self;
 });
