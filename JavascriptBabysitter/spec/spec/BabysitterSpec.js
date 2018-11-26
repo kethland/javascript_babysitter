@@ -9,4 +9,15 @@ describe ("A Babysitter", function(){
 			expect(expected.arrival).toEqual(2);
 		});
 	});
+	describe("it accepts a departure time",function(){
+
+		it("of 2 and returns it.",function(){
+			var expected = Babysitter(1,2);
+			expect(expected.departure).toEqual(2);
+		});
+		it("of 4 and returns it.",function(){
+			var expected = Babysitter(1,4);
+			expect(expected.departure).toEqual(4);
+		});
+	});
 });
