@@ -1,14 +1,19 @@
-var Babysitter =( function(){
+var Babysitter =( function(arrival, departure){
 	
 	var self = function(){};
 	
-	function calculate(){
+	var arrival = arrival;
+	var departure = departure;
+		function calculate(arrival){
+			
+			return arrival;
 		
-		return 1;
+		};
 		
-	};
 	
 	self.pay = calculate();
+	self.arrival = arrival;
+	self.departure = departure;
 	
 	return self;
 });
