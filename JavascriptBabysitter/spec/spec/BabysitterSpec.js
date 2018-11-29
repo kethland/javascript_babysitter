@@ -20,4 +20,26 @@ describe ("A Babysitter", function(){
 			expect(expected.departure).toEqual(4);
 		});
 	});
+	describe("it accepts a bedtime",function(){
+
+		it("of 3 and returns it.",function(){
+			var expected = Babysitter(1,2,3);
+			expect(expected.bedtime).toEqual(3);
+		});
+		it("of 6 and returns it.",function(){
+			var expected = Babysitter(1,4,6);
+			expect(expected.bedtime).toEqual(6);
+		});
+		it("will not allow bedtimes of midnight",function(){
+			var expected = Babysitter(1,4,12);
+			expect(expected.pay).toEqual("Please reenter a valid bedtime.");
+		});
+	});
+	describe("when given a babysitters arrival and departure times",function(){
+
+		it("it will return the difference",function(){
+			var expected = Babysitter(1,4,3);
+			expect(expected.pay).toEqual(3);
+		});
+	});	
 });
