@@ -2,39 +2,36 @@ describe ("A Babysitter", function(){
 	
 	describe("it accepts an arrival time" , function(){
 		
-		it("of 5 and normalizes it.", function(){
-			var expected = Babysitter(5);
-			expect(expected.arrival).toEqual(17);
-		});
-		
 		it("of 1 and denys it.", function(){
 			var expected = Babysitter(1);
 			expect(expected.arrival).toEqual("You cannot arrive until 5 pm.");
 		});
 		
-		it("of 2 and returns it.", function(){
+		it("of 2 and denies it.", function(){
 			var expected = Babysitter(2);
 			expect(expected.arrival).toEqual("You cannot arrive until 5 pm.");
 		});
 		
-		it("of 2 and returns it.", function(){
-			var expected = Babysitter(2);
-			expect(expected.arrival).toEqual("You cannot arrive until 5 pm.");
+		it("of 5 and normalizes it.", function(){
+			var expected = Babysitter(5);
+			expect(expected.arrival).toEqual(17);
 		});
+
+		
 		
 	});
 	describe("it accepts a departure time",function(){
 
-//		it("of 2 and returns it.",function(){
-//			var expected = Babysitter(5,2);
-//			expect(expected.departure).toEqual(2);
-//		});
-//		
-//		it("of 4 and returns it.",function(){
-//			var expected = Babysitter(5,4);
-//			expect(expected.departure).toEqual(4);
-//		});
-//		
+		it("of 2 and returns it.",function(){
+			var expected = Babysitter(5,2);
+			expect(expected.departure).toEqual(2);
+		});
+		
+		it("of 4 and returns it.",function(){
+			var expected = Babysitter(5,4);
+			expect(expected.departure).toEqual(4);
+		});
+		
 	});
 	describe("it accepts a bedtime",function(){
 
