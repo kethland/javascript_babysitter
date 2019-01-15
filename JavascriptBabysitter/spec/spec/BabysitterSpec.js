@@ -15,9 +15,7 @@ describe ("A Babysitter", function(){
 		it("of 5 and normalizes it.", function(){
 			var expected = Babysitter(5);
 			expect(expected.arrival).toEqual(17);
-		});
-
-		
+		});	
 		
 	});
 	describe("it accepts a departure time",function(){
@@ -26,10 +24,15 @@ describe ("A Babysitter", function(){
 			var expected = Babysitter(5,2);
 			expect(expected.departure).toEqual(2);
 		});
-		
-		it("of 4 and returns it.",function(){
+				
+		it("of 4 and denies it.",function(){
 			var expected = Babysitter(5,4);
-			expect(expected.departure).toEqual(4);
+			expect(expected.departure).toEqual("Must leave by 4 am.");
+		});
+		
+		it("of 5 and denies it.",function(){
+			var expected = Babysitter(5,5);
+			expect(expected.departure).toEqual("Must leave by 4 am.");
 		});
 		
 	});
@@ -59,6 +62,7 @@ describe ("A Babysitter", function(){
 //			var expected = Babysitter(5,4,13);
 //			expect(expected.pay).toEqual("Please reenter a valid bedtime.");
 //		});
+		
 	});
 	describe("when given a babysitters arrival and departure times",function(){
 
