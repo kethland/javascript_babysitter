@@ -38,37 +38,37 @@ describe ("A Babysitter", function(){
 	});
 	describe("it accepts a bedtime",function(){
 
-//		it("of 3 and returns it.",function(){
-//			var expected = Babysitter(5,2,3);
-//			expect(expected.bedtime).toEqual(3);
-//		});
-//		
-//		it("of 6 and returns it.",function(){
-//			var expected = Babysitter(5,4,6);
-//			expect(expected.bedtime).toEqual(6);
-//		});
-//		
-//		it("and ensures it is not midnight",function(){
-//			var expected = Babysitter(5,4,12);
-//			expect(expected.pay).toEqual("Please reenter a valid bedtime.");
-//		});
-//		
-//		it("and ensures it is not greater than 12",function(){
-//			var expected = Babysitter(5,4,13);
-//			expect(expected.pay).toEqual("Please reenter a valid bedtime.");
-//		});
-//		
-//		it("and ensures it is not earlier than 5pm",function(){
-//			var expected = Babysitter(5,4,13);
-//			expect(expected.pay).toEqual("Please reenter a valid bedtime.");
-//		});
+		it("of 3 and returns it.",function(){
+			var expected = Babysitter(5,2,3);
+			expect(expected.bedtime).toEqual(3);
+		});
+		
+		it("of 6 and returns it.",function(){
+			var expected = Babysitter(5,4,6);
+			expect(expected.bedtime).toEqual(6);
+		});
+		
+		it("and ensures it is not midnight",function(){
+			var expected = Babysitter(5,4,12);
+			expect(expected.pay).toEqual("Please reenter a valid bedtime.");
+		});
+		
+		it("and ensures it is not greater than 12",function(){
+			var expected = Babysitter(5,4,13);
+			expect(expected.pay).toEqual("Please reenter a valid bedtime.");
+		});
+		
+		it("and ensures it is not earlier than 5pm",function(){
+			var expected = Babysitter(5,4,13);
+			expect(expected.pay).toEqual("Please reenter a valid bedtime.");
+		});
 		
 	});
 	describe("when given a babysitters arrival and departure times",function(){
 
-//		it("it will return the difference",function(){
-//			var expected = Babysitter(5,4,3);
-//			expect(expected.pay).toEqual(3);
-//		});
+		it("it will return the difference",function(){
+			var expected = Babysitter(5,4,3);
+			expect(expected.pay).toEqual(3);
+		});
 	});	
 });
