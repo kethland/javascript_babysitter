@@ -9,7 +9,7 @@ var Babysitter =( function(arrival, departure, bedtime){
 	
 	self.arrival = normalizeArrivalTime(arrival);
 	self.departure = normalizeDepartureTime(departure);
-	self.bedtime = bedtime;
+	self.bedtime = normalizeBedtime(bedtime);
 	
 		function normalizeArrivalTime(arrival){
 			
@@ -27,12 +27,19 @@ var Babysitter =( function(arrival, departure, bedtime){
 			}else
 			return departure
 		};
+		
+		function normalizeBedtime(bedtime){
+			if(bedtime >=12){
+				return "Please reenter a valid bedtime."
+			}else {
+				return bedtime
+			}
+		};
 	
 		function calculate(){
 			
-			if(bedtime >= 12){
-				return "Please reenter a valid bedtime."
-			}else {return arrival-departure;}
+			return departure - arrival;
+			
 		};
 				
 	self.pay = calculate();

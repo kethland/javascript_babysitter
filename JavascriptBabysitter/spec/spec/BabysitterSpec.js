@@ -53,22 +53,27 @@ describe ("A Babysitter", function(){
 			expect(expected.pay).toEqual("Please reenter a valid bedtime.");
 		});
 		
-		it("and ensures it is not greater than 12",function(){
-			var expected = Babysitter(5,4,13);
-			expect(expected.pay).toEqual("Please reenter a valid bedtime.");
-		});
-		
-		it("and ensures it is not earlier than 5pm",function(){
-			var expected = Babysitter(5,4,13);
-			expect(expected.pay).toEqual("Please reenter a valid bedtime.");
-		});
+//		it("and ensures it is not greater than 12",function(){
+//			var expected = Babysitter(5,4,13);
+//			expect(expected.pay).toEqual("Please reenter a valid bedtime.");
+//		});
+//		
+//		it("and ensures it is not earlier than 5pm",function(){
+//			var expected = Babysitter(5,4,13);
+//			expect(expected.pay).toEqual("Please reenter a valid bedtime.");
+//		});
 		
 	});
 	describe("when given a babysitters arrival and departure times",function(){
 
-		it("it will return the difference",function(){
-			var expected = Babysitter(5,4,3);
-			expect(expected.pay).toEqual(3);
+		it("of 5pm and 6pm it returns one hour",function(){
+			var expected = Babysitter(5,6,3);
+			expect(expected.pay).toEqual(1);
+		});
+		
+		it("of 5pm and midnight it returns 7 hours",function(){
+			var expected = Babysitter(5,12,3);
+			expect(expected.pay).toEqual(7);
 		});
 	});	
 });
