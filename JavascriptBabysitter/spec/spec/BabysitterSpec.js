@@ -75,5 +75,6 @@ describe ("A Babysitter", function(){
 			var expected = Babysitter(5,12,3);
 			expect(expected.pay).toEqual(7);
 		});
+		
 	});	
 });
