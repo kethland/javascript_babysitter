@@ -50,18 +50,18 @@ describe ("A Babysitter", function(){
 		
 		it("and ensures it is not midnight",function(){
 			var expected = Babysitter(5,4,12);
-			expect(expected.pay).toEqual("Please reenter a valid bedtime.");
+			expect(expected.bedtime).toEqual("Please reenter a valid bedtime.");
 		});
 		
-//		it("and ensures it is not greater than 12",function(){
-//			var expected = Babysitter(5,4,13);
-//			expect(expected.pay).toEqual("Please reenter a valid bedtime.");
-//		});
-//		
-//		it("and ensures it is not earlier than 5pm",function(){
-//			var expected = Babysitter(5,4,13);
-//			expect(expected.pay).toEqual("Please reenter a valid bedtime.");
-//		});
+		it("and ensures it is not greater than 12",function(){
+			var expected = Babysitter(5,4,13);
+			expect(expected.bedtime).toEqual("Please reenter a valid bedtime.");
+		});
+		
+		it("and ensures it is not earlier than 5pm",function(){
+			var expected = Babysitter(5,4,13);
+			expect(expected.bedtime).toEqual("Please reenter a valid bedtime.");
+		});
 		
 	});
 	describe("when given a babysitters arrival and departure times",function(){

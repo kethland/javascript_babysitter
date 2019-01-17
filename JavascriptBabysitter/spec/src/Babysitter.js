@@ -29,7 +29,7 @@ var Babysitter =( function(arrival, departure, bedtime){
 		};
 		
 		function normalizeBedtime(bedtime){
-			if(bedtime >=12){
+			if(bedtime >= 12){
 				return "Please reenter a valid bedtime."
 			}else {
 				return bedtime
