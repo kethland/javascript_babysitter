@@ -2,47 +2,39 @@ var Babysitter =( function(arrival, departure, bedtime){
 	
 	var self = function(){};
 	
-	var arrival = arrival;
-	var departure = departure;
-	var bedtime = bedtime;
+	var arrival = normalizeTime(arrival);
+	var departure =  normalizeTime(departure);
+	var bedtime = normalizeTime(bedtime);	
 	
-	
-	self.arrival = normalizeArrivalTime(arrival);
-	self.departure = normalizeDepartureTime(departure);
-	self.bedtime = normalizeBedtime(bedtime);
-	
-		function normalizeArrivalTime(arrival){
-			
-			arrival += 12;
-			if (arrival <= 16){
-				return "You cannot arrive until 5 pm.";
-			}else
-				return arrival;
-		};
+	function calculate(arrival, departure, bedtime){
 		
-		function normalizeDepartureTime(departure){
-			
-			if(departure >= 4){
-				return "Must leave by 4 am.";
-			}else
-			return departure
-		};
+		var pay = 0;
 		
-		function normalizeBedtime(bedtime){
-			if(bedtime >= 12){
-				return "Please reenter a valid bedtime."
-			}else {
-				return bedtime
+		if(bedtime < 12){
+			for(var i = arrival; i < departure ; i++){
+				pay += 8;
 			}
-		};
+		}else
+			
+		for(var i = arrival; i < departure ; i++){
+			pay += 10;
+		}
+			
+		return pay;
+		
+	};
 	
-		function calculate(){
-			
-			return departure - arrival;
-			
-		};
-				
-	self.pay = calculate();
+	function normalizeTime(time){
+		if (time <= 4){
+			return time += 12;
+		}
+		return time;
+	};
+	
+	self.arrival = arrival;
+	self.departure = departure;
+	self.bedtime = bedtime;
+	self.pay = calculate(arrival,departure,bedtime);
 	
 	
 	
