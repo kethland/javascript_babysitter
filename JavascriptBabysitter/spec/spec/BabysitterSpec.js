@@ -2,40 +2,35 @@ describe ("A Babysitter", function(){
 	
 	describe("normalizes times after midnight" , function(){
 		
-//		it("of 1 and normalizes it.", function(){
-//			var expected = Babysitter(1,1,1);
-//			expect(expected.arrival).toEqual(13);
-//		});
-//		
-//		it("of 2 and normalizes it.", function(){
-//			var expected = Babysitter(2);
-//			expect(expected.arrival).toEqual(14);
-//		});
-//		
-//		it("of 5 and normalizes it.", function(){
-//			var expected = Babysitter(5);
-//			expect(expected.arrival).toEqual(5);
-//		});	
+		it("of 1 and normalizes it.", function(){
+			var expected = Babysitter(1,1,1);
+			expect(expected.arrival).toEqual(13);
+		});
+		
+		it("of 2 and normalizes it.", function(){
+			var expected = Babysitter(2);
+			expect(expected.arrival).toEqual(14);
+		});
+		
+		it("of 5 and normalizes it.", function(){
+			var expected = Babysitter(5);
+			expect(expected.arrival).toEqual(5);
+		});	
 		
 	});
 	
 	describe("accepts a departure time",function(){
 
-//		it("of 2 and normalizes it.",function(){
-//			var expected = Babysitter(5,2);
-//			expect(expected.departure).toEqual(14);
-//		});
-//				
-//		it("of 4 and normalizes it.",function(){
-//			var expected = Babysitter(5,4);
-//			expect(expected.departure).toEqual(16);
-//		});
+		it("of 2 and normalizes it.",function(){
+			var expected = Babysitter(5,2);
+			expect(expected.departure).toEqual(14);
+		});
 				
-	});
-	
-	describe("accepts a bedtime",function(){
-
-		
+		it("of 4 and normalizes it.",function(){
+			var expected = Babysitter(5,4);
+			expect(expected.departure).toEqual(16);
+		});
+				
 	});
 		
 	describe("receives pay",function(){

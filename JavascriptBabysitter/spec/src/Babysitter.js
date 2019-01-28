@@ -12,15 +12,15 @@ var Babysitter =( function(arrival, departure, bedtime){
 		
 		for(var i = arrival; i < departure ; i++){
 			if(i >= bedtime){
-				pay += afterMidnightPay(i, pay);
+				pay += afterMidnightPay(i);
 			}else
-				pay += 10;
+				pay += addPayForHour(10);
 		}		
 		return pay;
 		
 	};
 	
-	function afterMidnightPay(i, pay){
+	function afterMidnightPay(i){
 		if(i >= 12){
 			return addPayForHour(8);
 		}else
