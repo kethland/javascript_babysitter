@@ -13,9 +13,9 @@ var Babysitter =( function(arrival, departure, bedtime){
 		for(var i = arrival; i < departure ; i++){
 			if(i >= bedtime){
 				if(i >= 12){
-					pay += 8;
+					pay += addPayForHour(8);
 				}else
-				pay += 6;
+					pay += addPayForHour(6);
 			}else
 			pay += 10;
 		}
@@ -23,6 +23,10 @@ var Babysitter =( function(arrival, departure, bedtime){
 			
 		return pay;
 		
+	};
+	
+	function addPayForHour(payRate){
+		return payRate;
 	};
 	
 	function normalizeTime(time){
