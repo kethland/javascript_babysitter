@@ -54,7 +54,15 @@ describe ("A Babysitter", function(){
 			var expected = Babysitter(5,7,6);
 			expect(expected.pay).toEqual(16);
 		});
-	
 		
+		it("for riding herd for after kids go to bed, and an hour after midnight",function(){
+			var expected = Babysitter(11,1,12);
+			expect(expected.pay).toEqual(18);
+		});
+		
+		it("Pay story test.",function(){
+			var expected = Babysitter(5,4,11);
+			expect(expected.pay).toEqual(98);
+		});
 	});	
 });

@@ -12,6 +12,9 @@ var Babysitter =( function(arrival, departure, bedtime){
 		
 		for(var i = arrival; i < departure ; i++){
 			if(i >= bedtime){
+				if(i >= 12){
+					pay += 8;
+				}else
 				pay += 6;
 			}else
 			pay += 10;
